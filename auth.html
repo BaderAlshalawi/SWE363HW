@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login/Register - User Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="auth-style.css">
+  </head>
+  <body>
+    <!--Nav for page-->
+
+    <nav class="nav">
+      <img class="ask-imge" src="./images/AskItNowLogo.png" alt="Ask It Now" />
+      <a class ="ask-now" href="index.html">AskItNow</a>
+
+      <form action="">
+        <input type="text" placeholder="Search questions..." />
+      </form>
+      <a class="login" id="login-link" href="auth.html">Login</a>
+      <img class="hero-imge"
+        src=" https://www.gravatar.com/avatar/placeholder?s=50&d=robohash"
+        alt=""
+      />
+    </nav>
+    <!--Login-->
+    <main>
+      <section>
+        <div class="container" id="login-form-section" style="display: block;">
+          <h2 class="header-word">Login</h2>
+          <form id="login-form">
+            <div class="grid">
+              <label class="normal-word" for="login-email">Email</label>
+              <input type="text" id="login-email" name="login-email" />
+  
+              <label class="normal-word" for="login-password">Password</label>
+              <input type="password" id="login-password" name="login-password" />
+  
+              <input type="submit" value="Login" />
+              <input type="button" value="OR register if you don't have an account" onclick="toggleForms()" />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!--Register-->
+      <section>
+        <div class="container" id="register-form-section" style="display: none;">
+          <h2 class="header-word">Register</h2>
+          <form id="register-form">
+            <div class="grid">
+              <label class="normal-word" for="register-email">Email</label>
+              <input type="text" id="register-email" name="register-email" />
+  
+              <label class="normal-word" for="register-password">Password</label>
+              <input type="password" id="register-password" name="register-password" />
+  
+              <label class="normal-word" for="register-fullName">Full Name</label>
+              <input type="text" id="register-fullName" name="register-fullName" />
+  
+              <label class="normal-word" for="register-Bio">Bio</label>
+              <textarea class="normal-word" name="register-Bio" id="register-Bio" cols="10" rows="6"></textarea>
+  
+              <label class="normal-word" for="avatar">Avatar Image</label>
+              <div class="file-input-container">
+                <input type="file" id="avatar" name="avatar">
+              </div>
+              <input type="submit" value="Create Profile"/>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 <span class="footer-Ask">Ask It Now </span>Q&A Platform - All rights reserved.</p>
+    </footer>
+
+    <!-- Include frontend JavaScript -->
+    <script src="frontendJs.js"></script>
+  </body>
+</html>

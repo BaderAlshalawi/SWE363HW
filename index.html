@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AskItNow Q&A Platform</title>
+    <link href="indx-style.css" rel="stylesheet"></a>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div id="head">
+        <div id="logo"><img src="images/AskItNowLogo.png" alt="AskItNowLogo" id="logoImg"></div>
+        <div class="Ask" id="head">AskItNow</div>
+        <div id="searchBar"><input type="search" placeholder="Search question..." id="searchBar"></div>
+        <div id="logHead"><a id='login-link' href="auth.html">Login</a>
+            <img src="https://www.gravatar.com/avatar/placeholder?s=50&d=robohash" alt="log in image" id="logInImage">
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="firstPart">
+            <div class="AllQuestion">
+                <div id="pageContent">
+                    <h1> All Question</h1>
+                </div>
+                <div class="filters">
+                    <div>
+                        <label for="Sort">Sort by:</label>
+                        <select name="sortedType" id="Sort">
+                            <option value="Newest">Newest</option>
+                            <option value="Oldest">Oldest</option>
+                            <option value="MostAnswered">Most Answered</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Sort">Filter:</label>
+                        <select name="FilterType" id="Filter">
+                            <option value="All">All</option>
+                            <option value="Answered">Answered</option>
+                            <option value="Unanswered">Unanswered</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div class="button">
+                <input type="button" id="full-text" value="+Ask New Question" class="button">
+                <input type="button" id="short-text" value="+" class="button">
+            </div>
+        </div>
+
+
+        <div class="secondPart">
+            <div class="questions">
+                <div class="AnswerdQ" id="questions-container">
+                </div>
+
+                <div class="AskQ" style="display: none;">
+                    <form method="POST" action="question.html">
+                        <div id="header">
+                            <h2>Ask a New Question</h2>
+                        </div>
+                        <div>
+                            <label for="title" class="label">Title</label>
+                            <input type="text" class="input" id="title" name="title">
+                        </div>
+                        <div>
+                            <label for="details" class="label">Details</label>
+                            <!-- <input type="text" id="details" name="details" multiple> -->
+                            <textarea name="details" class="input" rows="4" cols="25"></textarea>
+                        </div>
+                        <div>
+                            <label for="tags" class="label">Tags</label>
+                            <input type="text" id="tags" class="input" name="tags"
+                                placeholder="e.g. java, nullpointerexception">
+                        </div>
+                        <div><input type="submit" value="Submit Question" id="submitQ"></div>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="Tags">
+                <div>
+                    <h2>Top Tags</h2>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="">java</a>(10)</li>
+                        <li><a href="">python</a>(5)</li>
+                        <li><a href="">javascript</a>(3)</li>
+                        <li><a href="">array</a>(2)</li>
+                        <li><a href="">string</a>(1)</li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="askQuestionModal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal-btn" class="close">&times;</span>
+            <form id="new-question-form">
+                <div id="header">
+                    <h2>Ask a New Question</h2>
+                </div>
+                <div>
+                    <label for="title" class="label">Title</label>
+                    <input type="text" class="input" id="new-question-title" name="title">
+                </div>
+                <div>
+                    <label for="details" class="label">Details</label>
+                    <!-- <input type="text" id="details" name="details" multiple> -->
+                    <textarea id="new-question-description" name="details" class="input textarea" rows="20" cols="25"></textarea>
+                </div>
+                <div>
+                    <label for="tags" class="label">Tags</label>
+                    <input type="text" id="new-question-tags" class="input" name="tags"
+                        placeholder="e.g. java, nullpointerexception">
+                </div>
+                <div><input type="submit" value="Submit Question" id="submitQ"></div>
+            </form>
+        </div>
+    </div>
+    </div>
+    
+    <div class="footer">
+        <footer>
+            <p>&copy; 2024 <span class="Ask">Ask It Now</span> Q&A Platform - All rigth reserved.</p>
+        </footer>
+    </div>
+    <!-- Include frontend JavaScript -->
+    <script src="frontendJs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Question Detail - AskItNow</title>
+        <link href="que-style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <div id="head">
+            <div id="logo"><img src="images/AskItNowLogo.png" alt="AskItNowLogo" id="logoImg"></div>
+            <div class="Ask" id="head">AskItNow</div>
+            <div id="searchBar"><input type="search" placeholder="Search question..."id="searchBar"></div>
+            <div id="logHead"><a id="login-link" href="auth.html">Login</a> 
+            <img src="https://www.gravatar.com/avatar/placeholder?s=50&d=robohash"alt="log in image" id="logInImage"></div>
+        </div>
+        
+        <div class="main">
+
+
+            <div class="question">
+
+                <div class="theQ">
+                    <div>Asked At: 01/01/2024</div>
+                    <div>
+                        <h2>How do I solve a NullPointerException in Java</h2>
+                        <div>
+                            I'am getting a NullPointerException when trying to access a variable. How can I solve this?
+                            <br>
+                            <div class="details">
+                                <div><a href="" class="links">java</a>
+                                <a href="" class="links">exception</a></div>
+                                <div class="asker">Asked by: John Doe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="answers">
+                    <div><h2>Answers</h2></div>
+                    <div class="answer">
+                        <div class="choices">
+                            <input type="button" name="thumbsUp" class="choicee" id="thumbsUp" value="&#128077;">
+                            5
+                            <input type="button" name="thumbsDown" class="choicee" id="thumbsDown" value="&#128078;">
+                            <input type="button" name="Accept" class="choicee" id="Accept" value="Accept">
+                            <span id="correct">&check;</span>
+                        </div>
+                        <div>
+                            You need to check if the variable is null before accessing it.
+                            Answerd on:02/01/2024 
+                        </div>
+                        <div class="asker">Answerd by: Omar Salih</div>
+                    </div>
+                    <div class="answer">
+                        <div class="choices">
+                            <input type="button" name="thumbsUp"class="choicee" id="thumbsUp" value="&#128077;">
+                            3
+                            <input type="button" name="thumbsDown"class="choicee" id="thumbsDown" value="&#128078;">
+                            <input type="button" name="Accept"class="choicee" id="Accept" value="Accept">
+                        </div>
+                        <div>
+                            Make sure ti initialize the vatiable before using it.
+                            Answered on: 01/01/2024
+                        </div>
+                        <div class="asker">Answered by: Khalid Ahmed</div>
+                    </div>
+                </div>
+
+                <div class="yourAnswe">
+                    <div><h2>Your Answer</h2></div>
+                    <div>
+                        <textarea rows="10" cols="30" class="newAnswer"></textarea><br>
+                    </div>
+                    <div>
+                        <input type="button" name="postAnswer" id="button" value="Post Your Answer">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="relatedQ">
+                <div class="related"><h2>Realted Question</h2>
+                    <ul class="related" id="otherQ">
+                        <li><a href="">How do I solve a NullPointerException in Java?</a></li>
+                        <li><a href="">to sort an array in Java?</a></li>
+                    </ul>
+                </div>  
+            </div>
+
+        </div>
+    <div class="footer">
+        <footer>
+            <p>&copy; 2024 <span class="Ask">Ask It Now</span> Q&A Platform - All rigth reserved.</p>
+        </footer>
+    </div>
+        <!-- Include frontend JavaScript -->
+        <script src="frontendJs.js"></script>
+    </body>
+    
+</html>

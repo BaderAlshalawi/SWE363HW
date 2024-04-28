@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;    
+  }
+
+  .container{
+    max-width: 120rem;
+    padding: 0 3.2rem;
+
+  }
+
+  .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.6rem;
+ 
+    flex-wrap: wrap; /* Allow items to wrap to the next line on small screens */
+
+
+    background-color: #404dff;
+
+
+  }
+  .nav img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 0.3rem black solid;
+  }
+ 
+.ask-now{
+  justify-self: end;
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.6rem;
+
+}
+.ask-imge {
+  margin-right: -2.6rem; /* Adjust the value to close the gap */
+}
+
+.nav form{
+  width: 50vw;
+  height: 3.6rem;
+
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.nav input{
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 9px;
+}
+
+.login{
+    font-size: 1.6rem;
+
+}
+.header-word{
+  font-size: 2.6rem;
+}
+
+.normal-word{
+  font-size: 2rem;
+  
+
+
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+input[type="file"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #eee; 
+  border-radius: 5px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  margin-bottom: 1.4rem;
+}
+.file-input-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.file-input-container input[type="file"] {
+  border: none;
+  padding: 0;
+}
+#avatar{
+  padding: 0.2rem;
+}
+
+input[type="submit"] {
+  background-color: #003366; /* Dark blue background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 25rem;
+}
+
+input[type="submit"]:hover {
+  background-color: #002244; 
+}
+
+input[type="button"] {
+  background-color: transparent;
+  border: none;
+  color: #000000;  
+  cursor: pointer;
+  padding-left: 10px;
+  font-size: 16px;
+  background-color: #ddd;
+  border-radius: 5px;
+
+}
+
+input[type="button"]:hover {
+  text-decoration: underline;
+}
+footer {
+  background-color: #404dff;; /* Replace with the actual color */
+  color: white;
+  padding: 10px;
+  font-size: 2.6rem;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0; /* no extra space around the <p> element */
+}
+.footer-Ask{
+  justify-self: end;
+  background: #121FCF;
+  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  .ask-now{
+    display: none;
+  
+  }
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  input[type="submit"]{
+    width: 100%;
+  }
+  input[type="button"]{
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  input[type="text"]{
+    padding: 5px; 
+}
+.grid{
+  gap: 1rem;
+}
+
+}
