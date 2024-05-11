@@ -1,0 +1,25 @@
+{% extends "layout.njk" %}
+
+{% block title %}Home - AskItNow{% endblock %}
+
+{% block content %}
+<main>
+    <h1>Welcome to AskItNow</h1>
+    <p>Find answers to your questions or ask the community.</p>
+</main>
+{% endblock %}
+
+{% block aside %}
+<aside>
+    <p>Additional resources or links can go here.</p>
+</aside>
+{% endblock %}
+
+{% block scripts %}
+<script src="/js/frontendJs.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        getQuestions(); // Assuming getQuestions function fetches and displays questions
+    });
+</script>
+{% endblock %}

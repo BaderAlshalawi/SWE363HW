@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Common header content goes here -->
+    </header>
+
+    <nav>
+        <!-- Common navigation links go here -->
+    </nav>
+
+    <main>
+        {% block content %}
+        <!-- Replaceable content goes here -->
+        {% endblock %}
+    </main>
+
+    <aside>
+        {% block aside %}
+        <!-- Replaceable sidebar content goes here -->
+        {% endblock %}
+    </aside>
+
+    <footer>
+        <!-- Common footer content goes here -->
+    </footer>
+
+    {% block scripts %}
+    <!-- Scripts that run on every page can be placed here -->
+    <script src="/js/common.js"></script>
+    {% endblock %}
+</body>
+</html>

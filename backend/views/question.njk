@@ -1,0 +1,48 @@
+{% extends "layout.njk" %}
+
+{% block title %}{{ question.title }} - AskItNow{% endblock %}
+
+{% block content %}
+<article>
+    <h2>{{ question.title }}</h2>
+    <p>{{ question.details }}</p>
+    <div>Tags:
+        {% for tag in question.tags %}
+        <span>{{ tag }}</span>
+        {% endfor %}
+    </div>
+
+    <h3>Answers</h3>
+    {% if question.answers | length > 0 %}
+        {% for answer in question.answers %}
+        <div>
+            <p>{{ answer.text }}</p>
+            <div>
+                <a href="/answer/{{ answer._id }}?method=upvote">Upvote</a>
+                <a href="/answer/{{ answer._id }}?method=downvote">Downvote</a>
+                {% if not question.answered %}
+                <a href="/answer/{{ answer._id }}?method=accept">Accept</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No answers yet.</p>
+    {% endif %}
+</article>
+{% endblock %}
+
+{% block aside %}
+<aside>
+    <form action="/questions/{{ question._id }}" method="post">
+        <input type="hidden" name="answeredBy" value="Anonymous">
+        <textarea name="text" required placeholder="Your answer"></textarea>
+        <button type="submit">Post Your Answer</button>
+    </form>
+</aside>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="/js/questionHandling.js"></script>
+{% endblock %}
